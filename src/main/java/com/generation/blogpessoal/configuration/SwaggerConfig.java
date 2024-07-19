@@ -1,4 +1,4 @@
-﻿package com.generation.blogpessoal.configuration;
+package com.generation.blogpessoal.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springframework.context.annotation.Bean;
@@ -16,24 +16,16 @@ import io.swagger.v3.oas.models.responses.ApiResponses;
 public class SwaggerConfig {
 
 	@Bean
-    OpenAPI springBlogPessoalOpenAPI() {
-        return new OpenAPI()
-            .info(new Info()
-                .title("Projeto Blog Pessoal")
-                .description("Projeto Blog Pessoal - Generation Brasil")
-                .version("v0.0.1")
-                .license(new License()
-                    .name("Generation Brasil")
-                    .url("https://brazil.generation.org/"))
-                .contact(new Contact()
-                    .name("Helena Fonseca")
-                    .url("https://github.com/NotofTroy")
-                    .email("helenacsfonseca@hotmail.com")))
-            .externalDocs(new ExternalDocumentation()
-                .description("Github")
-                .url("https://github.com/NotofTroy/blogpessoal"));
-    }
-
+	OpenAPI springBlogPessoalOpenAPI() {
+		return new OpenAPI()
+				.info(new Info().title("Projeto Blog Pessoal").description("Projeto Blog Pessoal - Generation Brasil")
+						.version("v0.0.1")
+						.license(new License().name("Generation Brasil").url("https://brazil.generation.org/"))
+						.contact(new Contact().name("Helena Fonseca").url("https://github.com/NotofTroy")
+								.email("helenacsfonseca@hotmail.com")))
+				.externalDocs(new ExternalDocumentation().description("Github")
+						.url("https://github.com/NotofTroy"));
+	}
 
 	@Bean
 	OpenApiCustomizer customerGlobalHeaderOpenApiCustomiser() {
